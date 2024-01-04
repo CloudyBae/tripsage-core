@@ -10,10 +10,6 @@ Parameters:
       - 'dev'
       - 'prod'
 
-  ServiceEnv:
-    Description: 'Name of the service environment'
-    Type: 'String'
-
 Conditions:
   IsProd: !Equals [!Ref ResourceEnv, 'prod']
   IsDev: !Equals [!Ref ResourceEnv, 'dev']
