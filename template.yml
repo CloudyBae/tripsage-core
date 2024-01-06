@@ -116,7 +116,7 @@ Resources:
     Properties:
       Description: Trip Sage DDB Name Dev
       Type: String
-      Value: !Ref TripSageDdbTableDev
+      Value: !GetAtt TripSageDdbTableDev.TableName
 
   TripSageDdbArnDev:
     Type: AWS::SSM::Parameter
@@ -124,7 +124,7 @@ Resources:
     Properties:
       Description: Trip Sage DDB Arn Dev
       Type: String
-      Value: !Ref TripSageDdbTableDev.Arn
+      Value: !GetAtt TripSageDdbTableDev.Arn
 
   TripSageDdbNameProd:
     Type: AWS::SSM::Parameter
@@ -132,7 +132,7 @@ Resources:
     Properties:
       Description: Trip Sage DDB Name Prod
       Type: String
-      Value: !Ref TripSageDdbTableProd
+      Value: !GetAtt TripSageDdbTableProd.TableName
 
   TripSageDdbArnProd:
     Type: AWS::SSM::Parameter
@@ -140,4 +140,4 @@ Resources:
     Properties:
       Description: Trip Sage DDB Name Prod
       Type: String
-      Value: !Ref TripSageDdbTableProd.Arn
+      Value: !GetAtt TripSageDdbTableProd.Arn
