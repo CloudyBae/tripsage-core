@@ -47,4 +47,4 @@ jobs:
 
       - name: Sam deploy
         run: |
-          sam deploy --stack-name "prod" --no-fail-on-empty-changeset --parameter-overrides ResourceEnv="prod" ServiceEnv="prod"
+          sam deploy --stack-name "tripsage-core-prod" --no-fail-on-empty-changeset --parameter-overrides ResourceEnv="prod" ServiceEnv="prod"
