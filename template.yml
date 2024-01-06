@@ -105,3 +105,39 @@ Resources:
               KeyType: RANGE
           Projection:
             ProjectionType: ALL
+
+#####################
+#  Parameter Store  #
+#####################
+
+  TripSageDdbNameDev:
+    Type: AWS::SSM::Parameter
+    Condition: IsDev
+    Properties:
+      Description: Trip Sage DDB Name Dev
+      Type: String
+      Value: !Ref TripSageDdbTableDev
+
+  TripSageDdbArnDev:
+    Type: AWS::SSM::Parameter
+    Condition: IsDev
+    Properties:
+      Description: Trip Sage DDB Arn Dev
+      Type: String
+      Value: !Ref TripSageDdbTableDev.Arn
+
+  TripSageDdbNameProd:
+    Type: AWS::SSM::Parameter
+    Condition: IsProd
+    Properties:
+      Description: Trip Sage DDB Name Prod
+      Type: String
+      Value: !Ref TripSageDdbTableProd
+
+  TripSageDdbArnProd:
+    Type: AWS::SSM::Parameter
+    Condition: IsProd
+    Properties:
+      Description: Trip Sage DDB Name Prod
+      Type: String
+      Value: !Ref TripSageDdbTableProd.Arn
