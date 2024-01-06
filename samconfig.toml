@@ -3,7 +3,7 @@ version = 0.1
 [default.global]
 [default.global.parameters]
 region="us-east-1"
-s3_bucket="tripsage-sam-bucket"
+s3_bucket="tripsage-sam-core-bucket"
 output_template_file="packaged.yml"
 template_file="template.yml"
 
