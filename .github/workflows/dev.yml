@@ -1,4 +1,4 @@
-name: Dev-feature Env - Feature, Hotfix, Bugfix
+name: Dev
 on:
   push:
     branches:
@@ -46,4 +46,4 @@ jobs:
 
       - name: Sam deploy
         run: |
-          sam deploy --stack-name "tripsage-core-dev" --no-fail-on-empty-changeset --parameter-overrides ResourceEnv="dev" ServiceEnv="$github_branch_name"
+          sam deploy --stack-name "tripsage-core-dev" --no-fail-on-empty-changeset --parameter-overrides ResourceEnv="dev"
